@@ -1,4 +1,10 @@
+# Table of Contents
+1. [ Data mining .](#dm)  
+2. [ Text mining .](#tm)  
+3. [ Big Data Analytics .](#bda)  
+  
 
+<a name="dm"></a>
 # Data Mining
 ## Business Intelligence
 Process of:
@@ -433,7 +439,7 @@ Parent child Relationship among the levels.
 
 
 
-
+<a name="tm"></a>
 # Text Mining
 
 
@@ -586,7 +592,7 @@ Input:
 	- $sin(\frac{i}{M\frac{j}{d}})$ if j is even
 	- $cos(\frac{i}{M\frac{j-1}{d}})$ if j is odd
 
-
+<a name="bda"></a>
 # Big Data Analytics
 
 ## Hadoop Ecosystem Overview
@@ -854,4 +860,3 @@ meas[1:4]
 88118 
 ('2015-10-30', 'Ozone', 'Rimini')
 ```
-
