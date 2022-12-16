@@ -628,7 +628,7 @@ In contrast MapReduce focuses on **data-intensive jobs** (e.g. complex transform
 
 ### MapReduce
 
-- $map(f,A)$ applies a function $f$ to a collection of objects $A$ ($\{f(x) : x \in A\}$.
+- $map(f,A)$ applies a function $f$ to a collection of objects $A$ = $\{f(x) : x \in A\}$.
 - $reduce(f,A)$ applies a function f of **two arguments** to a sequence of objects, accumulating intermediate results until the sequence is reduced to a single value: $f(...f(f(a_1,a_2),a_3)...a_n)$ with $A=(a_1,...,a_n)$.
 - In **MapReduce**: computation = sequence of alternating map and reduce function calls which operate in parallel on distributed data.
 
