@@ -76,7 +76,7 @@ E.g. Product → Sub-Category → Category
 
 **OLAP**:
 - Interactive Data Processing system for **dynamic multidimensional analyses**.
-- Each query involves **hue amount of records** to process a set of numeric data summing up the perfrmance of enterprise
+- Each query involves **huge amount of records** to process a set of numeric data summing up the perfrmance of enterprise
 - Worload changes over time
 
 ### DataMart
