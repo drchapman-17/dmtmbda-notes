@@ -435,7 +435,7 @@ Parent child Relationship among the levels.
 
 - **Business Users** → use pre-configured dashboards and reports.7
 - **Business Analysts** → use self-service BI and ad-hoc analytics (build own models to provide insights).
-- ** Data Scientists, Endineers, App Developers** → Perform statistical Analysis, ML training, BDA to identify trends, solve business problems, optimize performance.
+- **Data Scientists, Engineers, App Developers** → Perform statistical Analysis, ML training, BDA to identify trends, solve business problems, optimize performance.
 
 
 
