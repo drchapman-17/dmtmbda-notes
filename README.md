@@ -596,10 +596,10 @@ Input:
 
 - **Attention Problem** → Quadratic space-time complexity.
 - *Most popular strategies to solve the problem*:
-	- **Fixed/Learnable Patterns** → Attention only between blocks of size $B<<L$ of the input
+	- **Fixed/Learnable Patterns** → Attention only between blocks of size $B < < L$ of the input
 	- **Memory** → use additional "memory" in the form of global tokens that allow to aggregate information and reduce the number of attended tokens.
 	- **Low-Rank Methods** → use a low-rank approximation of the attention matrix.  It projects the vectors into a lower dimensional space.
-	- **Kernels** → use kernel functions to express attention without calculting the $L\times L$ matrix.
+	- **Kernels** → use kernel functions to express attention without calculting the $L \times L$ matrix.
 	- **Recurrence** → Fixed patterns mehanism but introduce recurrent connections between blocks.
 
 Examples:
