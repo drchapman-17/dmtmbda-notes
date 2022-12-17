@@ -592,6 +592,42 @@ Input:
 	- $sin(\frac{i}{M\frac{j}{d}})$ if j is even
 	- $cos(\frac{i}{M\frac{j-1}{d}})$ if j is odd
 
+## Optimizations for the Attention mechanism
+
+- **Attention Problem** → Quadratic space-time complexity.
+- *Most popular strategies to solve the problem*:
+	- **Fixed/Learnable Patterns** → Attention only between blocks of size $B<<L$ of the input
+	- **Memory** → use additional "memory" in the form of global tokens that allow to aggregate information and reduce the number of attended tokens.
+	- **Low-Rank Methods** → use a low-rank approximation of the attention matrix.  It projects the vectors into a lower dimensional space.
+	- **Kernels** → use kernel functions to express attention without calculting the $L\times L$ matrix.
+	- **Recurrence** → Fixed patterns mehanism but introduce recurrent connections between blocks.
+
+Examples:
+
+- **Performer** → Kernel based solution, rewrites attention formulation. Avoids computing an $A$ matrix using FAVOR+ which approximates kernel K (Keys).
+- **Big Bird** → model with linear complexity which uses a memory mechanisms. Approximates attention using: **random attention** (random links between nodes), **window attention** (neighbours connection), **global attention** ( $g$ nodes are completely connected).
+- **Reformer** → $O(LlogL)$, approximates attention using *learnable patterns* through **Locality Sensitive Hashing**. Uses shared parameters between $W_Q$ and $W_K$.
+- **Transformer-XL** → processes longer documents storing outputs in a cache to be resued as extended context for *keys* and *values*.
+
+## Deep Metric Learning
+
+- Metric learning → find a latent embedding space that allows to separate data according to a given metric
+- 2 types:
+	- **Supervised** → Labeled data, objective: learn a metric that brings the records belonging to the same class closer.
+	- **Weakly Supervised** → No lables, but classes can be inferred from the DS.
+
+### Objective
+
+Find a mahlanobis matrix $M$ s.t. taking two similar elements, $a,p$ and one dissimilar element $n$ we have that $d_M(a,b)<d_M(a,n)$ where $d_m(x,y) = \lvert Wx - Wy \rvert_2, M= W\intercal W$
+
+In **Deep Metric Learning** the objective is to learn the weights for the transformation $W_\theta$.
+
+### Loss Functions
+
+- **Constractive Loss** → Either the squared Mahalanobis distance if the elements are of the same class, or max(0, alpha - Squared distane) if they are of different classes. Makes so that inputs with different labels to have a distance grater than a margin alpha.
+- **Triplet Loss** →  given two elements of a class and one of a different class the loss is defined as the maximum between 0 and the squared distance between the anchor and the positive class, minus the squared distance between the anchor and the negative example plus alpha. This makes so that the distance between anchors and positives to be smaller than the distance between anchors and negatives.
+
+
 <a name="bda"></a>
 # Big Data Analytics
 
