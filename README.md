@@ -618,9 +618,13 @@ Examples:
 
 ### Objective
 
-Find a mahlanobis matrix $M$ s.t. taking two similar elements, $a,p$ and one dissimilar element $n$ we have that $d_M(a,b)<d_M(a,n)$ where $d_m(x,y) = \lvert Wx - Wy \rvert_2, M= W\intercal W$
+Find a mahlanobis matrix $M$ s.t. taking two similar elements, $a,p$ and one dissimilar element $n$ we have that 
 
-In **Deep Metric Learning** the objective is to learn the weights for the transformation $W_\theta$.
+$d_M(a,b)<d_M(a,n)$ 
+
+where $d_m(x,y) = \lvert Wx - Wy \rvert_2, M= W\intercal W$
+
+In **Deep Metric Learning** the objective is to learn the weights for the transformation $W_\theta$ .
 
 ### Loss Functions
 
