@@ -191,7 +191,7 @@ Two Different Ways:
 - **Administrability**: DWH management should be easy.
 
 ### Single Layer Architecture
-- Minimie the amount of stored data, removing redundancies
+- Minimize the amount of stored data, removing redundancies
 - Source layer = only physical layer available
 - DWH implemented as multidimensional view of operational data, created by a Middleware.
 
