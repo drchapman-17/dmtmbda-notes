@@ -526,7 +526,9 @@ Based on MLE.
 ## Chi-Square Test
 
 - Test to verify independenve between two events A and B
-- A and B are independent if $P(A,B)=P(A)P(B)$ or if $P(A|B)=P(A) \& P(B|A)=P(B)$
+- A and B are independent 
+	- if $P(A,B) = P(A)P(B)$ 
+	- or if $P(A|B) = P(A) \and P(B|A) = P(B)$
 
 ## Latent Semantic Analysis
 
